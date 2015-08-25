@@ -19,20 +19,15 @@ module.exports = {
   ],
   resolve: {
     alias: {
-    //   'redux': path.join(__dirname, 'src')
     },
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx?$/,
       loaders: ['react-hot', 'babel'],
       exclude: /node_modules/,
       include: __dirname
-    }, {
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'src')
     }, {
       test: /\.css?$/,
       loaders: ['style', 'raw'],
